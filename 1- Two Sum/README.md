@@ -44,7 +44,7 @@
 <p>&nbsp;</p>
   
 
-# Solution
+## Solution
 We can use HashTable (Dictionary). The `key` is the number in the array, and the `value` is the index of the number. We can iterate the array and check if `(target - currentNumber)` is in the HashTable. If it is, we can return the index of the `currentNumber` and the index of the `(target - currentNumber)`. If not, we can add the `currentNumber` and its index to the HashTable.  
 
 For exmple in `[2,7,11,15]` we get the first item `2` and put it the HashTable. Then for next item which is `7`, since we have `HashTable[9-7]`, then we have the answer. So we print the index of `9-7=2` (which is the value in the HashTable) and the index of the current item which is `7`.

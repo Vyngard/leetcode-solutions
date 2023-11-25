@@ -11,4 +11,5 @@ Also if you are looking for the best solutions there are many repositories out t
 
 |  #  |  Solution   |  Difficulty | Java | Python |
 | --- | --- | --- | --- | --- |
-|  0001  |  [Two Sum](./1-Two%20Sum/README.md)  | Easy | [Link](./1-Two%20Sum/Solution.java)  |[Link](./1-Two%20Sum/Solution.py)  |
+|  0001  |  [Two Sum](./1-%20Two%20Sum/README.md)  | Easy | [Link](./1-%20Two%20Sum/Solution.java)  |[Link](./1-%20Two%20Sum/Solution.py)  |
+|  0002  |  [Add Two Numbers](./2-%20Add%20Two%20Numbers/README.md)  | Medium | [Link](./2-%20Add%20Two%20Numbers/Solution.java)  |[Link](./2-%20Add%20Two%20Numbers/Solution.py)  |
