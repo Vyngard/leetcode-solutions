@@ -18,7 +18,7 @@ class Solution:
             number2 = 0 if l2 is None else l2.val
             sum = number1 + number2 + carry
 
-            carry = int(sum / 10)
+            carry = sum // 10
             current.val = sum % 10
 
             l1 = None if l1 is None else l1.next
