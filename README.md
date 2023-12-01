@@ -20,3 +20,4 @@ Also if you are looking for the best solutions there are many repositories out t
 |  0009  |  [Palindrome Number](./Solutions/9-%20Palindrome%20Number/README.md)  | Easy | [Link](./Solutions/9-%20Palindrome%20Number/Solution.java)  |[Link](./Solutions/9-%20Palindrome%20Number/Solution.py)  |
 |  0013  |  [Roman to Integer](./Solutions/13-%20Roman%20to%20Integer/README.md)  | Easy | [Link](./Solutions/13-%20Roman%20to%20Integer/Solution.java)  |[Link](./Solutions/13-%20Roman%20to%20Integer/Solution.py)  |
 |  0014  |  [Longest Common Prefix](./Solutions/14-%20Longest%20Common%20Prefix/README.md)  | Easy | [Link](./Solutions/14-%20Longest%20Common%20Prefix/Solution.java)  |[Link](./Solutions/14-%20Longest%20Common%20Prefix/Solution.py)  |
+|  0020  |  [Valid Parentheses](./Solutions/20-%20Valid%20Parentheses/README.md)  | Easy | [Link](./Solutions/20-%20Valid%20Parentheses/Solution.java)  |[Link](./Solutions/20-%20Valid%20Parentheses/Solution.py)  |
