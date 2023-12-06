@@ -27,5 +27,5 @@
 ## Solution
 
 we can consider a HashMap (dictionary). for the first string we add its characters and their frequency to the hashmap. then for the second string, we remove each character (or reduce frequency) base on each character. if these two strings are same, then we will have an empty HashMap. if we try to remove a character that is not in the HashMap, it means that these two strings are not anagrams. by considering the HashMap, it doens't matter what kind of character we have in our strings.
-Also for the second solution you can sort both strings and compare them too.
+Also for the second solution you can sort both strings and compare them too.   
 since we have to iterate over our strings, the time complexity is `O(n)`. Also by using HashMap, the space complexity is `O(1)`.
