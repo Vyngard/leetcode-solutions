@@ -11,11 +11,7 @@ class MyStack:
         return self.main_queue.pop()
 
     def top(self) -> int:
-
-        number = self.main_queue.pop()
-        self.main_queue.append(number)
-
-        return number
+        return self.main_queue[-1]
 
     def empty(self) -> bool:
         return len(self.main_queue) == 0
