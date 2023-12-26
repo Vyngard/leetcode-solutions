@@ -11,17 +11,17 @@ class Solution {
             this.right = right;
         }
     }
-
-
     
-    public int maxDepth(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
+    public TreeNode invertTree(TreeNode root) {
+        if (root == null)
+            return null;
 
-        int depth_right = maxDepth(root.right);
-        int depth_left = maxDepth((root.left));
+        var left_node = invertTree(root.left);
+        var right_node = invertTree(root.right);
 
-        return Math.max(depth_left,depth_right) + 1;
+        root.left = right_node;
+        root.right = left_node;
+
+        return root;
     }
 }
