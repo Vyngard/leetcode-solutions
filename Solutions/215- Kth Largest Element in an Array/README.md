@@ -25,4 +25,5 @@
 </ul>
 
 ## Solutions
-For this problem you can use Priority Queue (Min-Heap). The idea is to keep the k largest elements in the heap. So, we can iterate over the array and add each element to the heap. If the size of the heap is greater than k, we remove the smallest element from the heap. Finally, we return the top element of the heap.
+For this problem you can use Priority Queue (Min-Heap). The idea is to keep the k largest elements in the heap. So, we can iterate over the array and add each element to the heap. If the size of the heap is greater than k, we remove the smallest element from the heap. Finally, we return the top element of the heap.    
+There is also another solution which is based on Quick Select algorithm. You can find the details [here](https://www.youtube.com/watch?v=XEmy13g1Qxc).
