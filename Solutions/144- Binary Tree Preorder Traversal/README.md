@@ -40,5 +40,5 @@
 
 ## Solutions
 In pre-order you check the root first, then the left node, then right node. there are two ways for that:    
-1) recursive: you first the root, then return the value as an array. then you recursively check the left node and right node and return their value as array and add them to the current array.    
-2) iteration: you must you a stack. for each node that you check, first you add its value to the final array. then add the right node to stack, then add left node to stack. then pop the last elemenet from stack and do this again, until the stack is empty.
+1) recursive (provided in Python code): you first the root, then return the value as an array. then you recursively check the left node and right node and return their value as array and add them to the current array.    
+2) iteration (provided in Java code): you must you a stack. for each node that you check, first you add its value to the final array. then add the right node to stack, then add left node to stack. then pop the last elemenet from stack and do this again, until the stack is empty.
