@@ -1,34 +1,46 @@
-public class Solution {
-    public class ListNode {
-      int val;
-      ListNode next;
-      ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-  }
+class Solution {
 
-    public ListNode AddTwoNumbers(ListNode l1, ListNode l2) {
-        int number1, number2, carry = 0;
-        ListNode result = new ListNode();
-        var current = result;
+    public class ListNode {
+        int val;
+        ListNode next;
+        ListNode() {}
+        ListNode(int val) { this.val = val; }
+        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    }
+    
+
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode answer = new ListNode();
+        var current = answer;
+        int carry = 0;
+
         while (l1 != null || l2 != null || carry != 0) {
-            if (current.next == null) {
-                current.next = new ListNode();
-                current = current.next;
+            int result1, result2;
+
+            if (l1 == null)
+                result1 = 0;
+            else {
+                result1 = l1.val;
+                l1 = l1.next;
             }
 
-            number1 = l1 == null ? 0 : l1.val;
-            number2 = l2 == null ? 0 : l2.val;
-            int sum = number1 + number2 + carry;
 
-            carry = sum / 10;
-            current.val = sum % 10;
+            if (l2 == null)
+                result2 = 0;
+            else {
+                result2 = l2.val;
+                l2 = l2.next;
+            }
 
-            l1 = l1 == null ? null : l1.next;
-            l2 = l2 == null ? null : l2.next;
+            int temp = result1 + result2 + carry;
+            carry = temp / 10;
+            temp %= 10;
+
+            current.next = new ListNode(temp);
+            current = current.next;
+
         }
 
-        return result.next;
-
+        return answer.next;
     }
 }
