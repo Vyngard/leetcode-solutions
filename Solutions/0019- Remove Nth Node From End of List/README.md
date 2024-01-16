@@ -40,4 +40,6 @@
 <p><strong>Follow up:</strong> Could you do this in one pass?</p>
 
 ## Solutions
-You consider two pointers, first and second. the second one is `n` step ahead of the first one, so when it reaches the end, the first one is one node before the target node. Then you simply change the pointer from the current node to the `next next` node.
+1) provided in Java Code: You just go through the list and count the number of nodes. Then you go through the list again and remove the node at `length - n` position. 
+2) Provided in Python Code: You consider two pointers, first and second. the second one is `n` step ahead of the first one, so when it reaches the end, the first one is one node before the target node. Then you simply change the pointer from the current node to the `next next` node.    
+Both of these solutions are O(n) time complexity and O(1) space complexity.
