@@ -9,32 +9,33 @@ class Solution {
     }
 
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        ListNode list = new ListNode();
+        ListNode dummy = new ListNode();
+        var pointer1 = list1;
+        var pointer2 = list2;
+        var pointer = dummy;
 
-        var tail = list;
-
-
-        while (list1 != null && list2 != null) {
-            if (list1.val <= list2.val) {
-                tail.next = list1;
-                tail = tail.next;
-                list1 = list1.next;
+        while (pointer1 != null) {
+            if (pointer2 != null) {
+                if (pointer1.val <= pointer2.val) {
+                    pointer.next = pointer1;
+                    pointer1 = pointer1.next;
+                } else {
+                    pointer.next = pointer2;
+                    pointer2 = pointer2.next;
+                }
             } else {
-                tail.next = list2;
-                tail = tail.next;
-                list2 = list2.next;
+                pointer.next = pointer1;
+                pointer1 = pointer1.next;
             }
+            pointer = pointer.next;
         }
 
-        if (list1 == null && list2 == null)
-            return list.next;
-
-        if (list1 == null) {
-            tail.next = list2;
-        } else if (list2 == null) {
-            tail.next = list1;
+        while (pointer2 != null) {
+            pointer.next = pointer2;
+            pointer = pointer.next;
+            pointer2 = pointer2.next;
         }
 
-        return list.next;
+        return dummy.next;
     }
 }
