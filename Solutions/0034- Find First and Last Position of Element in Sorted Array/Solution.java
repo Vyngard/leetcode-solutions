@@ -1,49 +1,46 @@
 class Solution {
     public int[] searchRange(int[] nums, int target) {
-        if (nums.length == 0)
-            return new int[]{-1,-1};
         int left = 0;
         int right = nums.length - 1;
-        int middle;
-        int start = nums.length;
+        int start = -1;
         int finish = -1;
+        int middle;
 
         while (left < right) {
-            middle = (left + right) / 2;
-            if (target > nums[middle]) {
-                left = middle + 1;
-            } else if (target < nums[middle]) {
+            middle = (left + right + 1) / 2;
+            if (target < nums[middle])
                 right = middle - 1;
-            } else {
-                finish = middle;
+            else if (target > nums[middle])
                 left = middle + 1;
-            }
-        }
-
-        if (nums[left] == target)
-            finish = left;
-
-        left = 0;
-        right = nums.length - 1;
-
-        while (left < right) {
-            middle = (left + right) / 2;
-            if (target > nums[middle]) {
-                left = middle + 1;
-            } else if (target < nums[middle]) {
-                right = middle - 1;
-            } else {
+            else if (target == nums[middle]) {
                 start = middle;
                 right = middle - 1;
             }
         }
 
-        if (nums[left] == target)
+        if (left == right && nums[left] == target)
             start = left;
+        
+        left = 0;
+        right = nums.length - 1;
 
-        if (start == nums.length)
-            start = -1;
+        while (left < right) {
+            middle = (left + right + 1) / 2;
+            if (target < nums[middle])
+                right = middle - 1;
+            else if (target > nums[middle])
+                left = middle + 1;
+            else if (target == nums[middle]) {
+                finish = middle;
+                left = middle + 1;
+            }
+        }
+
+        if (left == right && nums[left] == target)
+            finish = left;
+        
 
         return new int[]{start,finish};
     }
+
 }
