@@ -1,26 +1,32 @@
 class Solution {
+    public class ListNode {
+        int val;
+        ListNode next;
+        ListNode() {}
+        ListNode(int val) { this.val = val; }
+        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    }
+    
     public ListNode deleteDuplicates(ListNode head) {
-        ListNode dummy = new ListNode();
-        dummy.next = head;
-
-        var previous = dummy;
+        ListNode dummy = new ListNode(-200);
         var current = head;
+        var pointer = dummy;
 
         while (current != null) {
-            while (current.next != null && current.next.val == current.val) {
+            if (current.val != current.next.val) {
+                pointer.next = current;
                 current = current.next;
-            }
-
-            if (previous.next == current) {
-                previous = current;
+                pointer = pointer.next;
             } else {
-                previous.next = current.next;
+                int number = current.val;
+                while (current.val == number) {
+                    current = current.next;
+                }
             }
-
-            current = current.next;
 
         }
 
         return dummy.next;
     }
+
 }
