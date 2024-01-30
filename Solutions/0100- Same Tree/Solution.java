@@ -1,15 +1,19 @@
 class Solution {
-    public boolean isSameTree(TreeNode p, TreeNode q) {
-        if (p == null && q == null)
+    public boolean isSymmetric(TreeNode root) {
+        return isSymmetric(root.left, root.right);
+    }
+
+    private boolean isSymmetric(TreeNode left, TreeNode right) {
+        if (left == null && right == null)
             return true;
 
-        if (p == null && q != null || p != null && q == null || p.val != q.val)
+        if (left == null && right != null || left != null && right == null || left.val != right.val)
             return false;
 
-        boolean left = isSameTree(p.left, q.left);
-        boolean right = isSameTree(p.right, q.right);
+        var side1 = isSymmetric(left.left, right.right);
+        var side2 = isSymmetric(left.right, right.left);
 
-        return left && right;
+        return side1 && side2;
     }
 
 }
