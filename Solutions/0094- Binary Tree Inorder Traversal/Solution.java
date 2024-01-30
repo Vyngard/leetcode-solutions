@@ -4,19 +4,18 @@ import java.util.List;
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
         if (root == null)
-            return new ArrayList<>() {};
-
-        var left_list = inorderTraversal(root.left);
-        var right_list = inorderTraversal(root.right);
+            return new ArrayList<>();
 
 
-        ArrayList<Integer> final_list = new ArrayList<>();
+        var left = inorderTraversal(root.left);
+        var right = inorderTraversal(root.right);
 
-        final_list.addAll(left_list);
-        final_list.add(root.val);
-        final_list.addAll(right_list);
+        ArrayList<Integer> temp = new ArrayList<>();
+        temp.addAll(left);
+        temp.add(root.val);
+        temp.addAll(right);
 
-        return final_list;
-
+        return temp;
     }
+
 }
