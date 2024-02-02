@@ -11,7 +11,7 @@ class Solution {
 
 
         stack.add(root);
-        set.add(null);
+        set.add(null); // you add null so you can consider the leafs
 
         while (!stack.isEmpty()) {
             root = stack.peek();
