@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Solution {
+class Solution2 {
     public List<Integer> inorderTraversal(TreeNode root) {
         if (root == null)
             return new ArrayList<>();

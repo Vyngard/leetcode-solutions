@@ -38,6 +38,6 @@
 <strong>Follow up:</strong> Recursive solution is trivial, could you do it iteratively?
 
 ## Solutions
-1- Recursive (which is provided in Java file): you just have to check the left and right subtree of each node. then first add the left subtree array to your final array, then the root value, then the right subtree array.   
+1- Recursive (which is provided in Solution2.java file): you just have to check the left and right subtree of each node. then first add the left subtree array to your final array, then the root value, then the right subtree array.   
  
-2- Iterative (which is provided in Python file): you have to use a stack to store the nodes. then you have to check if the node is not null, then push it to the stack and go to the left subtree. if the node is null, then pop the last node from the stack and add it to the final array, then go to the right subtree. you have to do this until the stack is empty and the node is null.
+2- Iterative (which is provided in Python and Solution1.java file): you have to use a stack to store the nodes. then you have to check if the node is not null, then push it to the stack and go to the left subtree. if the node is null, then pop the last node from the stack and add it to the final array, then go to the right subtree. you have to do this until the stack is empty and the node is null.
