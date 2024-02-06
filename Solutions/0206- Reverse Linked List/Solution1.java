@@ -12,17 +12,19 @@ class Solution {
 
     public ListNode reverseList(ListNode head) {
 
-        ListNode newList = new ListNode();
+        ListNode dummy = new ListNode();
         var current = head;
 
         while (current != null) {
-            var next = current.next;
-            current.next = newList.next;
-            newList.next = current;
-            current = next;
-        }
+            var temp = current.next;
 
-        return newList.next;
+            current.next = dummy.next;
+            dummy.next = current;
+            
+            current = temp;
+        }
+        
+        return dummy.next;
 
     }
 }
