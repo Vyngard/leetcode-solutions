@@ -1,27 +1,24 @@
-import java.util.List;
-
 class Solution {
     public ListNode removeElements(ListNode head, int val) {
-        var current = head;
-        ListNode previous = null;
-        var newHead = head;
-        
-        while(current != null) {
-            if (current.val == val) {
-                if (previous != null) {
-                    previous.next = current.next;
-                    current = current.next;
-                } else {
-                    newHead = current.next;
-                    current = current.next;
-                }
-            } else {
-                previous = current;
-                current = current.next;
-            }
+        ListNode dummy = new ListNode();
+        dummy.next = head;
+        var currentNode = dummy;
+        var nextNode = dummy.next;
 
+        while (nextNode != null) {
+            if (nextNode.val != val) {
+                nextNode = nextNode.next;
+                currentNode = currentNode.next;
+            } else {
+                while (nextNode != null && nextNode.val == val) {
+                    nextNode = nextNode.next;
+                }
+                currentNode.next = nextNode;
+            }
         }
 
-        return newHead;
+        currentNode.next = nextNode;
+        return dummy.next;
     }
+
 }
