@@ -4,12 +4,12 @@ from typing import List
 
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
-        max_heap = []
+        min_heap = []
 
         for num in nums:
-            heapq.heappush(max_heap, num)
+            heapq.heappush(min_heap, num)
 
-            if len(max_heap) > k:
-                heapq.heappop(max_heap)
+            if len(min_heap) > k:
+                heapq.heappop(min_heap)
 
-        return max_heap[0]
+        return min_heap[0]
