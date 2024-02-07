@@ -10,7 +10,7 @@ class MyStack {
     }
 
     public int pop() {
-        int size = queue.size();
+        int size = queue.size(); // you should get size in here, not in the loop, since each time the size reduces in the loop
 
         for (int i = 0; i < size - 1; i++) {
             temp.add(queue.remove());
@@ -33,7 +33,7 @@ class MyStack {
         }
 
         int answer = queue.peek();
-        temp.add(queue.remove());
+        temp.add(queue.remove()); // you should add the last element here to keep the order of numbers
 
         while (!temp.isEmpty()) {
             queue.add(temp.remove());
