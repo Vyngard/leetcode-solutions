@@ -2,54 +2,47 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 class MyStack {
-    Queue<Integer> main_queue;
-    Queue<Integer> temp_queue;
-    public MyStack() {
-        main_queue = new LinkedList<>();
-        temp_queue = new LinkedList<>();
-    }
+    Queue<Integer> queue = new LinkedList<>();
+    Queue<Integer> temp = new LinkedList<>();
 
     public void push(int x) {
-        main_queue.add(x);
+        queue.add(x);
     }
 
     public int pop() {
-        var size = main_queue.size();
+        int size = queue.size();
 
         for (int i = 0; i < size - 1; i++) {
-            temp_queue.add(main_queue.remove());
-        }
-        var number = main_queue.remove();
-
-        size = temp_queue.size();
-
-        for (int i = 0; i < size; i++) {
-            main_queue.add(temp_queue.remove());
+            temp.add(queue.remove());
         }
 
-        return number;
+        int answer = queue.remove();
+
+        while (!temp.isEmpty()) {
+            queue.add(temp.remove());
+        }
+
+        return answer;
     }
 
     public int top() {
-        var size = main_queue.size();
+        int size = queue.size();
+
         for (int i = 0; i < size - 1; i++) {
-            temp_queue.add(main_queue.remove());
+            temp.add(queue.remove());
         }
 
-        var number = main_queue.remove();
+        int answer = queue.peek();
+        temp.add(queue.remove());
 
-        temp_queue.add(number);
-
-        size = temp_queue.size();
-
-        for (int i = 0; i < size; i++) {
-            main_queue.add(temp_queue.remove());
+        while (!temp.isEmpty()) {
+            queue.add(temp.remove());
         }
 
-        return number;
+        return answer;
     }
 
     public boolean empty() {
-        return main_queue.isEmpty();
+        return queue.isEmpty();
     }
 }
