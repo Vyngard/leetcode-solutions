@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-class Solution {
+class Solution1 {
     public boolean isPalindrome(ListNode head) {
         ArrayList<Integer> array = new ArrayList<>();
         var current = head;

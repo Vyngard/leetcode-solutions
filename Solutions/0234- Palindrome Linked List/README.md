@@ -32,5 +32,5 @@
 
 ## Solutions
 You have two ways.   
-1) (provided in Java code) you can iteratee through linkedlist and save the value in array. then use two pointers to check if it is palindrome. this way is easier but since you are using an array the space complexity is O(n).    
-2) (Provided in Pyton) you use the slow and fast pointer in the linkedlist. when fast pointer reaches the end, the slow pointer will be in the middle. then you reverse the second half of the linkedlist and compare it with the first half. this way you don't need to use extra space. the time complexity is O(n) and space complexity is O(1).
+1) (provided in Solution1. java code) you can iteratee through linkedlist and save the value in array. then use two pointers to check if it is palindrome. this way is easier but since you are using an array the space complexity is O(n).    
+2) (Provided in Pyton and Solution2.java code) you use the slow and fast pointer in the linkedlist. when fast pointer reaches the end, the slow pointer will be in the middle. then you reverse the second half of the linkedlist and compare it with the first half. this way you don't need to use extra space. the time complexity is O(n) and space complexity is O(1).
