@@ -1,51 +1,43 @@
 import java.util.Stack;
 
 class MyQueue {
-    Stack<Integer> main_stack;
-    Stack<Integer> temp_stack;
-    public MyQueue() {
-        main_stack = new Stack<>();
-        temp_stack = new Stack<>();
-    }
+    Stack<Integer> stack = new Stack<>();
+    Stack<Integer> temp = new Stack<>();
 
     public void push(int x) {
-        main_stack.push(x);
+        stack.add(x);
     }
 
     public int pop() {
-        int size = main_stack.size();
-        for (int i = 0; i < size - 1; i++) {
-            temp_stack.push(main_stack.pop());
-        }
+        int size = stack.size();
 
-        int number = main_stack.pop();
+        for (int i = 0; i < size - 1; i++)
+            temp.add(stack.pop());
 
-        size = temp_stack.size();
-        for (int i = 0; i < size; i++) {
-            main_stack.push(temp_stack.pop());
-        }
+        int number = stack.pop();
+
+        while (!temp.isEmpty())
+            stack.add(temp.pop());
 
         return number;
     }
 
     public int peek() {
-        int size = main_stack.size();
+        int size = stack.size();
 
-        for (int i = 0; i < size - 1; i++) {
-            temp_stack.push(main_stack.pop());
-        }
-        int number = main_stack.peek();
+        for (int i = 0; i < size - 1; i++)
+            temp.add(stack.pop());
 
-        size = temp_stack.size();
-        
-        for (int i = 0; i < size; i++) {
-            main_stack.push(temp_stack.pop());
-        }
+        int number = stack.peek();
+        temp.add(stack.pop());
+
+        while (!temp.isEmpty())
+            stack.add(temp.pop());
 
         return number;
     }
 
     public boolean empty() {
-        return main_stack.isEmpty();
+        return stack.isEmpty();
     }
 }
