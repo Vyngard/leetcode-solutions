@@ -29,10 +29,11 @@ class RandomizedSet {
         }
 
         int index = map.get(val);
+        int lastItem = array.getLast();
 
-        map.put(array.get(array.size()-1), index);
-        array.set(index, array.get(array.size()-1));
-        array.remove(array.size()-1);
+        map.put(lastItem, index);
+        array.set(index, lastItem);
+        array.removeLast();
         map.remove(val);
         return true;
     }
