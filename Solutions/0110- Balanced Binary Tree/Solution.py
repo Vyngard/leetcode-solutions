@@ -5,12 +5,12 @@ class Solution:
             if not root:
                 return 0
 
-            right_height = height(root.right)
-            left_height = height(root.left)
+            right = height(root.right)
+            left = height(root.left)
 
-            if abs(left_height - right_height) > 1 or left_height == -2 or right_height == -2:
+            if abs(left - right) > 1 or left == -2 or right == -2:
                 return -2
 
-            return max(right_height, left_height) + 1
+            return max(right, left) + 1
 
-        return height(root) >= 0
+        return height(root) != -2
