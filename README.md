@@ -144,6 +144,7 @@ Also if you are looking for the best solutions there are many repositories out t
 |  0596  | [Classes More Than 5 Students](./Solutions/0596-%20Classes%20More%20Than%205%20Students/README.md)  | `Database` | Easy | [SQL Solution](./Solutions/0596-%20Classes%20More%20Than%205%20Students/Solution.sql)  |  |
 |  0607  | [Sales Person](./Solutions/0607-%20Sales%20Person/README.md)  | `Database` | Easy | [SQL Solution](./Solutions/0607-%20Sales%20Person/Solution.sql)  |  |
 |  0610  | [Triangle Judgement](./Solutions/0610-%20Triangle%20Judgement/README.md) | `Database` | Easy | [SQL Solution](./Solutions/0610-%20Triangle%20Judgement/Solution.sql)  | |
+|  0617  | [Merge Two Binary Trees](./Solutions/0617-%20Merge%20Two%20Binary%20Trees/README.md)  | `Tree`,`Depth-first Search` | Easy | [Link](./Solutions/0617-%20Merge%20Two%20Binary%20Trees/Solution.java)  |[Link](./Solutions/0617-%20Merge%20Two%20Binary%20Trees/Solution.py)  |
 |  0619  | [Biggest Single Number](./Solutions/0619-%20Biggest%20Single%20Number/README.md)  | `Database` | Easy | [SQL Solution](./Solutions/0619-%20Biggest%20Single%20Number/Solution.sql)  |  |
 |  0620  | [Not Boring Movies](./Solutions/0620-%20Not%20Boring%20Movies/README.md)  | `Database` | Easy | [SQL Solution](./Solutions/0620-%20Not%20Boring%20Movies/Solution.sql)  |  |
 |  0627  | [Swap Salary](./Solutions/0627-%20Swap%20Salary/README.md)  | `Database` | Easy | [SQL Solution](./Solutions/0627-%20Swap%20Salary/Solution.sql)  |  |
