@@ -40,7 +40,8 @@
 
 
 ## Solution
-In here we traverse the two linked lists at the same time and add the values of the nodes to each other and save the result in a new LinkedList. If the `sum` is greater than 10, we add 1 to the next `sum` (save it as `carry`).   
+1) In Java Code: In here we traverse the two linked lists at the same time and add the values of the nodes to each other and save the result in a new LinkedList. If the `sum` is greater than 10, we add 1 to the next `sum` (save it as `carry`).   
 If one of the linked lists is longer than the other, we add the rest of the longer linked list to the `sum`. We keep doing this until we reach the end of both linked lists and we don't have any `carry` left.   
 Then we return the new LinkedList `from the second node`, since the first one is 0 and it shouldn't be in our calculation.   
-The time complexity is O(max(m,n)), in which m and n are the lengths of the inputs. Since we have to traverse the longer LinkedList anyway, the time complexity is depandant on that. 
+The time complexity is O(max(m,n)), in which m and n are the lengths of the inputs. Since we have to traverse the longer LinkedList anyway, the time complexity is depandant on that.   
+2) In Python Code: You can extract the numbers from each list, add them together and then create a new list from the sum.
