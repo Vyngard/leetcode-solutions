@@ -8,11 +8,9 @@ class Solution:
             second = second.next
             n -= 1
 
-
         while second.next:
             first = first.next
             second = second.next
-
 
         first.next = first.next.next
 
