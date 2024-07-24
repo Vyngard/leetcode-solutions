@@ -1,7 +1,5 @@
 # [1636. Sort Array by Increasing Frequency](https://leetcode.com/problems/sort-array-by-increasing-frequency)
 
-[中文文档](/solution/1600-1699/1636.Sort%20Array%20by%20Increasing%20Frequency/README.md)
-
 ## Description
 
 <p>Given an array of integers <code>nums</code>, sort the array in <strong>increasing</strong> order based on the frequency of the values. If multiple values have the same frequency, sort them in <strong>decreasing</strong> order.</p>
